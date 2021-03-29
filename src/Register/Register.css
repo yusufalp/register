@@ -1,0 +1,50 @@
+form {
+  width: 31vw;
+  margin: 40vh auto;
+  min-width: 180px;
+  max-width: 420px;
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0 0 0 12px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 0 8px 12px;
+  width: 96%;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-left: 0;
+}
+
+.form-input-box {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 2px #d3d3d3;
+  margin: 0 auto 25px;
+  width: 30vw;
+  min-width: 180px;
+  max-width: 420px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: #0f77ac;
+  color: #ffffff;
+  display: block;
+  font-size: 1rem;
+  margin: 12px auto;
+  padding: 8px 0;
+  width: 10vw;
+  min-width: 80px;
+  max-width: 240px;
+}
