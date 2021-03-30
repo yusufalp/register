@@ -1,0 +1,85 @@
+form {
+  width: 31vw;
+  margin: 8vh auto;
+  min-width: 180px;
+  max-width: 420px;
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0 0 0 12px;
+}
+
+input {
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 0 8px 12px;
+  width: 92%;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-left: 0;
+  width: 12px;
+}
+
+.remember {
+  display: inline;
+  font-size: 1rem;
+}
+
+.form-input-box {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 2px #d3d3d3;
+  margin: 0 auto 25px;
+  width: 30vw;
+  min-width: 180px;
+  max-width: 420px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: #0f77ac;
+  color: #ffffff;
+  display: block;
+  font-size: 1.2rem;
+  margin: 12px auto;
+  padding: 16px;
+  width: 16vw;
+  min-width: 80px;
+  max-width: 240px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.register-links {
+  position: absolute;
+  bottom: 1vh;
+  width: 50%;
+  text-align: center;
+}
+
+.register-links a {
+  padding: 0 12px;
+  text-decoration: none;
+}
+
+.register-links p {
+  display: inline;
+}
+
+@media all and (min-height: 600px) {
+  form {
+    margin: 25vh auto;
+  }
+  .register-links {
+    bottom: 5vh;
+  }
+}
