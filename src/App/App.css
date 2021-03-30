@@ -4,20 +4,20 @@
   color: white;
 }
 
-.register-main {
+.login-main {
   display: flex;
   flex-direction: row;
 }
 
-.register-main-content,
-.register-main-image {
+.login-main-content,
+.login-main-image {
   display: flex;
   object-fit: cover;
   width: 50vw;
   height: 100vh;
 }
 
-.register-main-image img {
+.login-main-image img {
   object-fit: cover;
   width: 50vw;
 }
