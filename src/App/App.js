@@ -1,17 +1,15 @@
 import './App.css';
 import Register from '../Register/Register';
+import Login from '../Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <div className="register-main">
-        <div className="register-main-content">
-          <Register />
-        </div>
-        <div className="register-main-image">
-          <img src="https://usersnap.com/blog/wp-content/uploads/2017/04/web-design-background.png" alt="" />
-        </div>
+      <div className="login-main">
+        <Login className="login-main-content" />
+        <img className="login-main-image" src="https://usersnap.com/blog/wp-content/uploads/2017/04/web-design-background.png" alt="" />
       </div>
+      {/* <Register className="login-main-content" /> */}
     </div>
   );
 }
