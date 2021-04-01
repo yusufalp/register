@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+import Register from '../Register/Register';
 
 const Login = () => {
+  const [registerFormOpen, setRegisterFormOpen] = useState(false);
+
+  const onClickRegister = () => {
+    setRegisterFormOpen(true);
+  }
+
   return (
     <React.Fragment>
       <form action="">
@@ -18,9 +25,12 @@ const Login = () => {
         <button type="submit">Sign On</button>
       </form>
       <div className="register-links">
-        <a href="http://">Register</a>
-        <p>|</p>
-        <a href="http://">Forgot Password?</a>
+        <p onClick={onClickRegister}>Register</p>
+        <span>|</span>
+        <p >Forgot Password?</p>
+      </div>
+      <div className={`${registerFormOpen ? "" : "hidden"}`}>
+        <Register />
       </div>
     </React.Fragment>
   );
