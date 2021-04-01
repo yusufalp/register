@@ -66,13 +66,17 @@ button:hover {
   text-align: center;
 }
 
-.register-links a {
-  padding: 0 12px;
-  text-decoration: none;
+.register-links p {
+  margin: 0 18px;
+  display: inline;
 }
 
-.register-links p {
-  display: inline;
+.register-links p:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 @media all and (min-height: 600px) {
