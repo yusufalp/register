@@ -1,8 +1,8 @@
 form {
-  width: 31vw;
+  width: 55%;
   margin: 8vh auto;
   min-width: 180px;
-  max-width: 420px;
+  max-width: 400px;
 }
 
 label {
@@ -35,9 +35,8 @@ input[type="checkbox"] {
   border-radius: 5px;
   box-shadow: 0 0 7px 2px #d3d3d3;
   margin: 0 auto 25px;
-  width: 30vw;
   min-width: 180px;
-  max-width: 420px;
+  max-width: 480px;
 }
 
 button {
