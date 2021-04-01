@@ -1,0 +1,16 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-content {
+  background-color: white;
+  width: 50%;
+  margin: 20vh auto;
+  padding: 24px 0 6px 0;
+  border-radius: 10px;
+}
