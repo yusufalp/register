@@ -6,22 +6,22 @@ const Login = () => {
   const [registerFormOpen, setRegisterFormOpen] = useState(false);
 
   const onClickRegister = () => {
-    setRegisterFormOpen(true);
+    setRegisterFormOpen(!registerFormOpen);
   }
 
   return (
     <React.Fragment>
       <form action="">
         <div className="form-input-box">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input type="email" name="email" id="email" required autoFocus />
         </div>
         <div className="form-input-box">
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input type="password" name="password" id="password" required />
         </div>
         <input type="checkbox" name="remember" id="remember"></input>
-        <label className="remember" for="remember">Remember</label>
+        <label className="remember" htmlFor="remember">Remember</label>
         <button type="submit">Sign On</button>
       </form>
       <div className="register-links">
@@ -30,7 +30,7 @@ const Login = () => {
         <p >Forgot Password?</p>
       </div>
       <div className={`${registerFormOpen ? "" : "hidden"}`}>
-        <Register />
+        <Register onClickOutside={setRegisterFormOpen} />
       </div>
     </React.Fragment>
   );
