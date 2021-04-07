@@ -13,12 +13,12 @@ const Login = () => {
     <React.Fragment>
       <form action="">
         <div className="form-input-box">
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" required autoFocus />
+          <label htmlFor="login-email">Email</label>
+          <input type="email" name="login-email" id="login-email" required autoFocus />
         </div>
         <div className="form-input-box">
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" required />
+          <label htmlFor="login-password">Password</label>
+          <input type="password" name="login-password" id="login-password" required />
         </div>
         <input type="checkbox" name="remember" id="remember"></input>
         <label className="remember" htmlFor="remember">Remember</label>
