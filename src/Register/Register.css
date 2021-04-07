@@ -20,3 +20,9 @@
   margin-right: 12px;
   float: right;
 }
+
+.error-message {
+  color: #f45b69;
+  padding-left: 12px;
+  margin: 0;
+}
