@@ -11,6 +11,12 @@
   background-color: white;
   width: 50%;
   margin: 20vh auto;
-  padding: 24px 0 6px 0;
+  padding: 24px 24px 3px;
   border-radius: 10px;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  margin-right: 12px;
+  float: right;
 }
