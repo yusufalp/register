@@ -4,6 +4,61 @@
   color: white;
 }
 
+form {
+  width: 55%;
+  margin: 8vh auto;
+  min-width: 180px;
+  max-width: 400px;
+}
+
+.form-input-box {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 2px #d3d3d3;
+  margin: 12px auto 12px;
+  min-width: 180px;
+  max-width: 480px;
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  padding-left: 12px;
+}
+
+input {
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 0 8px 12px;
+  width: 92%;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-left: 0;
+  width: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  background-color: #0f77ac;
+  color: #ffffff;
+  display: block;
+  font-size: 1.2rem;
+  margin: 12px auto;
+  padding: 16px;
+  width: 16vw;
+  min-width: 80px;
+  max-width: 240px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
 .login-main {
   display: flex;
   flex-direction: row;
@@ -20,4 +75,14 @@
 .login-main-image img {
   object-fit: cover;
   width: 50vw;
+}
+
+.toggle-password-visibility {
+  float: right;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
