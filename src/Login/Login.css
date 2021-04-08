@@ -80,7 +80,7 @@ button:hover {
 
 @media all and (min-height: 600px) {
   form {
-    margin: 25vh auto;
+    margin: 32vh auto;
   }
   .register-links {
     bottom: 5vh;
