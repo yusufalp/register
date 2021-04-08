@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import './Register.css';
 
 const Register = (props) => {
-  const div = useRef();
+  const registerForm = useRef();
 
   const [userPassword, setUserPassword] = useState("");
   const [passwordCapitalLetterMessage, setPasswordCapitalLetterMessage] = useState("");
@@ -11,19 +11,23 @@ const Register = (props) => {
   const [passwordMatchMessage, setPasswordMatchMessage] = useState("");
 
   const handleClickOutside = (e) => {
-    if (div.current === e.target) {
-      props.onClickOutside();
+    if (registerForm.current === e.target) {
+      props.onClickClose();
     }
   }
 
+  const handleClickClose = () => {
+    props.onClickClose();
+  }
+
   const onChangeRegisterPassword = (e) => {
-    let value = e.target.value;
-    setUserPassword(value);
+    let passwordValue = e.target.value;
+    setUserPassword(passwordValue);
 
     let checkUpperCase = /[A-Z]/g;
     let checkNumber = /[0-9]/g;
-    let letterResult = checkUpperCase.test(value);
-    let numberResult = checkNumber.test(value);
+    let letterResult = checkUpperCase.test(passwordValue);
+    let numberResult = checkNumber.test(passwordValue);
 
     letterResult
       ? setPasswordCapitalLetterMessage("")
@@ -33,7 +37,7 @@ const Register = (props) => {
       ? setPasswordNumberMessage("")
       : setPasswordNumberMessage("Includes a number!");
 
-    value.length <= 8
+    passwordValue.length <= 8
       ? setPasswordLengthMessage("At least 8 characters!")
       : setPasswordLengthMessage("");
   }
@@ -45,7 +49,8 @@ const Register = (props) => {
   }
 
   return (
-    <div ref={div} className="modal" onClick={handleClickOutside}>
+    <div ref={registerForm} className="modal" onClick={handleClickOutside}>
+      <i class="close-icon far fa-times-circle" onClick={handleClickClose}></i>
       <form action="" className="modal-content">
         <div className="form-input-box">
           <label htmlFor="firstName">First Name</label>
