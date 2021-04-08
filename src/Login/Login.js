@@ -30,7 +30,7 @@ const Login = () => {
         <p >Forgot Password?</p>
       </div>
       <div className={`${registerFormOpen ? "" : "hidden"}`}>
-        <Register onClickOutside={setRegisterFormOpen} />
+        <Register onClickClose={setRegisterFormOpen} />
       </div>
     </React.Fragment>
   );
