@@ -5,8 +5,7 @@
 }
 
 form {
-  width: 55%;
-  margin: 8vh auto;
+  width: 60%;
   min-width: 180px;
   max-width: 400px;
 }
@@ -49,7 +48,7 @@ button {
   font-size: 1.2rem;
   margin: 12px auto;
   padding: 16px;
-  width: 16vw;
+  width: 40vw;
   min-width: 80px;
   max-width: 240px;
   transition: all 0.3s ease-in-out;
@@ -64,12 +63,15 @@ button:hover {
   flex-direction: row;
 }
 
-.login-main-content,
-.login-main-image {
+.login-main-content {
   display: flex;
   object-fit: cover;
   width: 50vw;
   height: 100vh;
+}
+
+.login-main-image {
+  display: none;
 }
 
 .login-main-image img {
@@ -85,4 +87,23 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media all and (min-height: 600px) {
+  form {
+    margin: 32vh auto;
+    width: 90%;
+  }
+}
+@media all and (min-width: 932px) {
+  .login-main-image {
+    display: flex;
+    object-fit: cover;
+    width: 50vw;
+    height: 100vh;
+  }
+
+  button {
+    width: 20vw;
+  }
 }
