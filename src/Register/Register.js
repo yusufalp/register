@@ -1,14 +1,19 @@
 import React, { useRef, useState } from 'react';
 import './Register.css';
+import PasswordToggle from '../PasswordToggle/PasswordToggle';
 
 const Register = (props) => {
   const registerForm = useRef();
 
-  const [userPassword, setUserPassword] = useState("");
-  const [passwordCapitalLetterMessage, setPasswordCapitalLetterMessage] = useState("");
-  const [passwordNumberMessage, setPasswordNumberMessage] = useState("");
-  const [passwordLengthMessage, setPasswordLengthMessage] = useState("");
-  const [passwordMatchMessage, setPasswordMatchMessage] = useState("");
+  const [userPassword, setUserPassword] = useState('');
+
+  const [passwordCapitalLetterMessage, setPasswordCapitalLetterMessage] = useState('');
+  const [passwordNumberMessage, setPasswordNumberMessage] = useState('');
+  const [passwordLengthMessage, setPasswordLengthMessage] = useState('');
+  const [passwordMatchMessage, setPasswordMatchMessage] = useState('');
+
+  const [passwordType, setPasswordType] = useState('password');
+  const [confirmPasswordType, setConfirmPasswordType] = useState('password');
 
   const handleClickOutside = (e) => {
     if (registerForm.current === e.target) {
@@ -30,27 +35,27 @@ const Register = (props) => {
     let numberResult = checkNumber.test(passwordValue);
 
     letterResult
-      ? setPasswordCapitalLetterMessage("")
-      : setPasswordCapitalLetterMessage("Includes capital letter!");
+      ? setPasswordCapitalLetterMessage('')
+      : setPasswordCapitalLetterMessage('Includes capital letter!');
 
     numberResult
-      ? setPasswordNumberMessage("")
-      : setPasswordNumberMessage("Includes a number!");
+      ? setPasswordNumberMessage('')
+      : setPasswordNumberMessage('Includes a number!');
 
     passwordValue.length <= 8
-      ? setPasswordLengthMessage("At least 8 characters!")
-      : setPasswordLengthMessage("");
+      ? setPasswordLengthMessage('At least 8 characters!')
+      : setPasswordLengthMessage('');
   }
 
   const onChangePasswordCheck = (e) => {
     userPassword !== e.target.value
-      ? setPasswordMatchMessage("Password do not match!")
-      : setPasswordMatchMessage("");
+      ? setPasswordMatchMessage('Password do not match!')
+      : setPasswordMatchMessage('');
   }
 
   return (
     <div ref={registerForm} className="modal" onClick={handleClickOutside}>
-      <i class="close-icon far fa-times-circle" onClick={handleClickClose}></i>
+      <i className="close-icon far fa-times-circle" onClick={handleClickClose}></i>
       <form action="" className="modal-content">
         <div className="form-input-box">
           <label htmlFor="firstName">First Name</label>
@@ -65,9 +70,11 @@ const Register = (props) => {
           <input type="email" name="register-email" id="register-email" required />
         </div>
         <div className="form-input-box">
-          <label htmlFor="register-password">Password</label>
+          <label htmlFor="register-password">Password
+            <PasswordToggle passwordType={passwordType} setPasswordType={setPasswordType} />
+          </label>
           <input
-            type="password"
+            type={passwordType}
             name="register-password"
             id="register-password"
             onChange={onChangeRegisterPassword}
@@ -78,9 +85,11 @@ const Register = (props) => {
         <p className="error-message">{passwordCapitalLetterMessage}</p>
         <p className="error-message">{passwordNumberMessage}</p>
         <div className="form-input-box">
-          <label htmlFor="passwordCheck">Re-type password</label>
+          <label htmlFor="passwordCheck">Re-type password
+            <PasswordToggle passwordType={confirmPasswordType} setPasswordType={setConfirmPasswordType} />
+          </label>
           <input
-            type="password"
+            type={confirmPasswordType}
             name="passwordCheck"
             id="passwordCheck"
             onChange={onChangePasswordCheck}
