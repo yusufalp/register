@@ -85,10 +85,6 @@ button:hover {
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
-}
-
 @media all and (min-height: 600px) {
   form {
     margin: 32vh auto;
